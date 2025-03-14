@@ -1,0 +1,14 @@
+import pandas as pd
+
+data = {
+    'color_name': ['Black', 'White', 'Red', 'Lime', 'Blue', 'Yellow', 'Cyan', 'Magenta', 'Silver', 'Gray',
+                   'Maroon', 'Olive', 'Green', 'Purple', 'Teal', 'Navy', 'Orange', 'Pink', 'Brown', 'Gold'],
+    'red': [0, 255, 255, 0, 0, 255, 0, 255, 192, 128, 128, 128, 0, 128, 0, 0, 255, 255, 165, 255],
+    'green': [0, 255, 0, 255, 0, 255, 255, 0, 192, 128, 0, 128, 128, 0, 128, 0, 165, 192, 42, 215],
+    'blue': [0, 255, 0, 0, 255, 0, 255, 255, 192, 128, 0, 0, 0, 128, 128, 128, 0, 203, 42, 0]
+}
+
+df = pd.DataFrame(data)
+
+# Save to CSV
+df.to_csv('colors.csv', index=False)
